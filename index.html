@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sholahuddin</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: url('profile-bg-5.webp') no-repeat center center/cover;
+      color: white;
+      height: 109vh;
+      overflow-x: hidden;
+      
+    }
+
+    /* Navbar */
+    header {
+      width: 100%;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.7);;
+    
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+
+    
+    
+
+    .btn {
+      background: #ff4d4d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff1a1a;
+    }
+
+    /* Hero section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      padding: 0 20px;
+      
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .highlight {
+      color: #ff4d4d;
+      border-bottom: 2px solid #ff4d4d;
+    }
+
+    /* Animasi teks mengetik */
+    .typing {
+      display: inline-block;
+      border-right: 2px solid #ff4d4d;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(12, end) infinite alternate, blink 0.6s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 10ch; }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: #ff4d4d; }
+    }
+
+    .content {
+      background: rgba(0,0,0,0.8);
+      padding: 80px 20px;
+      text-align: left;
+      margin: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid white;
+      padding: 8px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #ff4d4d;
+      margin-bottom: 10px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 5px;
+      border: none;
+    }
+
+    input[type="submit"], input[type="reset"] {
+      width: auto;
+      background: #ff4d4d;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: #ff1a1a;
+    }
+
+
+    /* Hasil submit */
+    .result {
+      background: #222;
+      padding: 80px 20px;
+      text-align: center;
+      
+    }
+
+    
+    .result h2 {
+      color: #ff4d4d;
+      margin-bottom: 20px;
+    }
+
+    .result p {
+      font-size: 1.1em;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SIBERMU</div>
+    
+    <a  href="#" class="btn" id="playBtn">Get Started</a>
+  </header>
+
+  <section class="hero">
+    <h1>Hi, I'm Sholahuddin</h1>
+    <p>I'm a <span class="highlight typing">Developer</span></p>
+  </section>
+
+  
+    <section class="content" id="content">
+    <table border="1">
+      <tr>
+        <th>NO</th>
+        <th>NIM</th>
+        <th>NAMA</th>
+        <th>JURUSAN</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>20250200013</td>
+        <td>Sholahuddin Al Habib</td>
+        <td>Sistem Informasi</td>
+      </tr>
+    </table>
+
+    <h1>Perkenalan Mahasiswa</h1>
+    <p>Assalamualaikum warahmatullahi wabarakatuh</p>
+    <p>Nama saya Sholahuddin Al Habib, saya lahir di Tuban pada tanggal 10 Oktober 1996. Hobi saya bermain game, membaca buku, dan mendengarkan musik. Saya sangat menyukai jurusan Sistem Informasi karena menurut saya jurusan ini menarik dan menantang.</p>
+
+    <h2><b><u>Input Data Mahasiswa</u></b></h2>
+    <form id="mahasiswaForm">
+      NIM : <input type="number" id="nim" name="nim" placeholder="Input NIM" required><br>
+      NAMA : <input type="text" id="nama" name="nama" placeholder="Sholahuddin" required><br>
+      ALAMAT : <input type="text" id="alamat" name="alamat" placeholder="Jl. Banyu" required><br>
+      UMUR : <input type="number" id="umur" name="umur" min="17" max="100" required><br>
+      EMAIL : <input type="email" id="email" name="email" placeholder="sholahuddin@siber.ac.id" required><br>
+      TANGGAL LAHIR : <input type="date" id="tgl" name="tgl"><br>
+      Hobi:<br>
+      <div style="display: flex;flex-direction: row-reverse;align-content: space-around;flex-wrap: wrap;justify-content: space-evenly;">
+      <input type="checkbox" name="hobi" value="Membaca">Membaca<br>
+      <input type="checkbox" name="hobi" value="Bermain Game">Bermain Game<br>
+      <input type="checkbox" name="hobi" value="Bermain Bola">Bermain Bola<br>
+      </div>
+      Jenis Kelamin:<br> <div style="display: flex;flex-direction: row-reverse;align-content: space-around;flex-wrap: wrap;justify-content: space-evenly;">
+      <input type="radio" name="jk" value="Laki-laki">Laki-laki<br>
+      <input type="radio" name="jk" value="Perempuan">Perempuan<br>
+    </div>
+      Jurusan:
+      <select name="jurusan" id="jurusan">
+        <option value="Sistem Informasi">Sistem Informasi</option>
+        <option value="Teknik Informatika">Teknik Informatika</option>
+        <option value="Administrasi Kesehatan">Administrasi Kesehatan</option>
+        <option value="Akuntansi">Akuntansi</option>
+        <option value="Manajemen">Manajemen</option>
+        <option value="Manajemen dan Hukum">Manajemen dan Hukum</option>
+      </select><br>
+      Pesan : <br>
+      <textarea id="pesan" name="pesan" required></textarea><br>
+      <input type="submit" value="KIRIM">
+      <input type="reset" value="RESET">
+    </form>
+  </section>
+
+  <section class="result" id="hasil">
+    <h2>Hasil Data Mahasiswa</h2>
+    <p><strong>NIM:</strong> <span id="resNim">-</span></p>
+    <p><strong>Nama:</strong> <span id="resNama">-</span></p>
+    <p><strong>Alamat:</strong> <span id="resAlamat">-</span></p>
+    <p><strong>Umur:</strong> <span id="resUmur">-</span></p>
+    <p><strong>Email:</strong> <span id="resEmail">-</span></p>
+    <p><strong>Tanggal Lahir:</strong> <span id="resTgl">-</span></p>
+    <p><strong>Hobi:</strong> <span id="resHobi">-</span></p>
+    <p><strong>Jenis Kelamin:</strong> <span id="resJk">-</span></p>
+    <p><strong>Jurusan:</strong> <span id="resJurusan">-</span></p>
+    <p><strong>Pesan:</strong> <span id="resPesan">-</span></p>
+  </section>
+
+
+
+  <script>
+
+    // Ambil data dari form
+    document.getElementById('mahasiswaForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('resNim').textContent = document.getElementById('nim').value;
+      document.getElementById('resNama').textContent = document.getElementById('nama').value;
+      document.getElementById('resAlamat').textContent = document.getElementById('alamat').value;
+      document.getElementById('resUmur').textContent = document.getElementById('umur').value;
+      document.getElementById('resEmail').textContent = document.getElementById('email').value;
+      document.getElementById('resTgl').textContent = document.getElementById('tgl').value;
+
+      // Ambil hobi
+      const hobiList = Array.from(document.querySelectorAll('input[name="hobi"]:checked')).map(x => x.value).join(', ');
+      document.getElementById('resHobi').textContent = hobiList || '-';
+
+      // Ambil jenis kelamin
+      const jk = document.querySelector('input[name="jk"]:checked');
+      document.getElementById('resJk').textContent = jk ? jk.value : '-';
+
+      document.getElementById('resJurusan').textContent = document.getElementById('jurusan').value;
+      document.getElementById('resPesan').textContent = document.getElementById('pesan').value;
+
+      // Scroll ke hasil
+      document.getElementById('hasil').scrollIntoView({ behavior: 'smooth' });
+    });
+
+  
+  </script>
+
+
+</body>
+</html>
